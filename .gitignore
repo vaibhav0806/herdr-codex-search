@@ -2,3 +2,6 @@ __pycache__/
 *.py[cod]
 .DS_Store
 *.sqlite*
+mods/*/gpui-kit.d.ts
+mods/*/herdr.d.ts
+mods/*/jsconfig.json

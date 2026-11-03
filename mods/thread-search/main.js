@@ -185,7 +185,7 @@ export default class ThreadSearch extends View {
     const row = this.results[this.at];
     const detail = this.detail;
     if (!row) return v_flex().size_full().items_center().justify_center().gap(12)
-      .child(svg("mods/workspace-chrome/search.svg").size(28).text_color(t.dim))
+      .child(svg("mods/thread-search/search.svg").size(28).text_color(t.dim))
       .child(div().text_size(13).text_color(t.muted).child("Find the conversation you remember."));
     return v_flex().size_full().min_w(0).gap(15).p(22)
       .child(div().text_size(10).font_semibold().text_color(t.dim).child(this.query ? "CONVERSATION PREVIEW" : "RECENT CONVERSATION"))
@@ -214,7 +214,7 @@ export default class ThreadSearch extends View {
       .child(h_flex().id("open-thread-search").size_full().px(10).gap(9).items_center().rounded(7).border_1().border_color(t.border).bg(t.background)
         .text_color(t.muted).text_size(12).hover(s => s.bg(t.hover).text_color(t.foreground)).cursor_pointer()
         .on_click(() => run("mod.open", { name: "thread-search" }))
-        .child(svg("mods/workspace-chrome/search.svg").size(14).flex_none())
+        .child(svg("mods/thread-search/search.svg").size(14).flex_none())
         .when(this.width >= 160, el => el.child(div().flex_1().child("Search threads"))
           .child(div().text_size(10).text_color(t.dim).child("⌘⇧K"))));
     const shown = this.results.slice(this.start, this.start + this.visibleRows());
@@ -229,7 +229,7 @@ export default class ThreadSearch extends View {
         }
       })
       .child(h_flex().h(60).flex_none().px(22).gap(13).items_center()
-        .child(svg("mods/workspace-chrome/search.svg").size(23).text_color(t.accent))
+        .child(svg("mods/thread-search/search.svg").size(23).text_color(t.accent))
         .child(Input.new(this.input).flex_1().h(46).text_size(21).text_color(t.foreground))
         .child(div().text_size(10).text_color(t.dim).border_1().border_color(t.border).rounded(5).px(6).py(3).child("esc")))
       .child(h_flex().h(36).flex_none().px(15).gap(5).items_center().border_t(1).border_color(t.border)

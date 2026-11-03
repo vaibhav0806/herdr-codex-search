@@ -1,0 +1,5 @@
+{
+  "place": "none",
+  "title": "Search Codex threads",
+  "overlay": { "kind": "dialog", "width": 900, "height": 0.6 }
+}
